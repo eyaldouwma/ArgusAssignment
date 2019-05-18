@@ -1,0 +1,10 @@
+.side-bar {
+    position: absolute;
+    left: 13%;
+    height: 80vh;
+    width: 300px;
+    background-color: #202020;
+    margin: 10px;
+    border-radius: 4px; 
+    overflow: auto;
+}
