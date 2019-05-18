@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 //connect to our MongoDB database
-mongoose.connect(`mongodb+srv://eyaldo1:${process.env.MONGO_PW}@vehicle-fleet-lmyrf.mongodb.net/test?retryWrites=true`, {
+mongoose.connect(`mongodb+srv://eyaldo1:Ee123456@vehicle-fleet-lmyrf.mongodb.net/test?retryWrites=true`, {
   useFindAndModify: false,
   useNewUrlParser: true,
 })
