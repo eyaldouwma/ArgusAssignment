@@ -3,6 +3,7 @@ const express = require('express');
 const vehicle = require('./api/routes/vehicle');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const path = require('path');
 const app = express();
 
 //connect to our MongoDB database
@@ -26,6 +27,23 @@ app.use(allowCrossDomain);
 //Middleware
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+
+//Static file declare
+app.use(express.static(path.join(__dirname,'client/build')));
+
+//production mode
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname,'client/build')));
+
+  app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname = 'client/build/index.html'));
+  })
+}
+
+//build mode
+app.get('*', (req,res) => {
+  res.sendFile(path.join(__dirname+'/client/public/index.html'));
+})
 
 //Routing
 app.use('/api/vehicle',vehicle);
