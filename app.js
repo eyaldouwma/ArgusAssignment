@@ -12,6 +12,8 @@ mongoose.connect('mongodb+srv://eyaldo1:Ee123456@vehicle-fleet-lmyrf.mongodb.net
   useNewUrlParser: true,
 })
 
+//Routing
+app.use('/api/vehicle',vehicle);
 
 //its ok for other domains to contact us, since we are a rest api
 //and we provide data services to others
@@ -44,8 +46,5 @@ if(process.env.NODE_ENV === 'production') {
 app.get('*', (req,res) => {
   res.sendFile(path.join(__dirname+'/client/public/index.html'));
 })
-
-//Routing
-app.use('/api/vehicle',vehicle);
 
 module.exports = app;
