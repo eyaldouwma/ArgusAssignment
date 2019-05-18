@@ -24,6 +24,7 @@ router.get('/',(req, res) => {
 });
 //add a new vehicle to DB
 router.post('/',(req, res) => {
+
     console.log('in post');
     logger.info(`post body${util.inspect(req.body,false,null)}`);
 
@@ -47,7 +48,8 @@ router.post('/',(req, res) => {
         })
 
     })
-})
+}).catch(err => logger.info(err));
+
 //edits a vehicle to DB
 router.put('/:vehicleid',(req,res) => {
 
