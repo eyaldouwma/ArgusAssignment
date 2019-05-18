@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 //connect to our MongoDB database
-mongoose.connect('mongodb+srv://eyaldo1:Ee123456@vehicle-fleet-lmyrf.mongodb.net/test?retryWrites=true', {
+mongoose.connect(`mongodb+srv://eyaldo1:${process.env.MONGO}-fleet-lmyrf.mongodb.net/test?retryWrites=true`, {
   useFindAndModify: false,
   useNewUrlParser: true,
 })
@@ -15,16 +15,15 @@ mongoose.connect('mongodb+srv://eyaldo1:Ee123456@vehicle-fleet-lmyrf.mongodb.net
 //Routing
 app.use('/api/vehicle',vehicle);
 
-//its ok for other domains to contact us, since we are a rest api
-//and we provide data services to others
-// const allowCrossDomain = function(req, res, next) {
-//     res.header('Access-Control-Allow-Methods', "*");
-//     res.header('Access-Control-Allow-Origin', "*");
-//     res.header('Access-Control-Allow-Headers', "*");
-//     next();
-//   }
 
-// app.use(allowCrossDomain);
+const allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Methods', "*");
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Headers', "*");
+    next();
+  }
+
+app.use(allowCrossDomain);
 
 //Middleware
 app.use(morgan('dev'));
