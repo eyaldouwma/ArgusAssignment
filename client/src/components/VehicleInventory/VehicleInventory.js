@@ -112,7 +112,7 @@ class VehicleInventory extends React.Component {
     }
 
     getVehicles() {
-        axios.get("http://localhost:3001/api/vehicle").then(res => {
+        axios.get("/api/vehicle").then(res => {
             this.setState({
                 listOfVehicles: res.data.vehicles,
                 loading: false,
