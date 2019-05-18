@@ -30,9 +30,9 @@ router.post('/',(req, res) => {
 
     const vehicle = new Vehicle({
         id: undefined,
-        name: req.body.name,
+        name: 123,
         created: undefined,
-        type: req.body.type,
+        type: 123,
     })
 
     vehicle.save().then(resp => {
@@ -48,7 +48,7 @@ router.post('/',(req, res) => {
         })
 
     })
-}).catch(err => logger.info(err));
+})
 
 //edits a vehicle to DB
 router.put('/:vehicleid',(req,res) => {
