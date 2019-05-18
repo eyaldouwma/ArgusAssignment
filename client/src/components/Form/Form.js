@@ -39,7 +39,7 @@ class Form extends React.Component {
         }
         else
         {
-            axios.post("http://localhost:3001/api/vehicle", {
+            axios.post("/api/vehicle", {
                 name: this.state.name,
                 type: this.state.type
             }).then(res => {

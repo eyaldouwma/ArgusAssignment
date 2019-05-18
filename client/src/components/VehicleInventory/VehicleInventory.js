@@ -47,7 +47,7 @@ class VehicleInventory extends React.Component {
     }
 
     removeVehicle() {
-        axios.delete(`http://localhost:3001/api/vehicle/${this.state.info.id}`, {
+        axios.delete(`/api/vehicle/${this.state.info.id}`, {
         }).then(() => {
             let newList = this.state.listOfVehicles;
             let index;
@@ -66,7 +66,7 @@ class VehicleInventory extends React.Component {
             this.handleCancel();
         }
         else {
-            axios.put(`http://localhost:3001/api/vehicle/${this.state.info.id}`, {
+            axios.put(`/api/vehicle/${this.state.info.id}`, {
                 name: this.state.nameEdit,
                 type: this.state.typeEdit
             }).then(res => {
