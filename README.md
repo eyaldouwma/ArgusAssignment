@@ -1,8 +1,8 @@
 # Argus - Vehicle Fleet Exercise
 
-Techonolgies Used: Node.JS Express server, React, MongoDB
+Technologies Used: Node.JS Express server, React, MongoDB
 
-deploy link: https://sleepy-bayou-85663.herokuapp.com/
+Deploy link: https://sleepy-bayou-85663.herokuapp.com/
 
 ## to run this code locally:
 
@@ -19,7 +19,7 @@ install client dependencies
 runs express server and react client,
 
 
-open http://localhost:3000 to view in browser
+#### open http://localhost:3000 to view in browser
 
 ### Bonuses
 
