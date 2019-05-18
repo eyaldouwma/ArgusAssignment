@@ -24,7 +24,7 @@ router.get('/',(req, res) => {
 });
 //add a new vehicle to DB
 router.post('/',(req, res) => {
-
+    console.log('in post');
     logger.info(`post body${util.inspect(req.body,false,null)}`);
 
     const vehicle = new Vehicle({

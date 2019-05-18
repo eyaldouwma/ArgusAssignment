@@ -17,14 +17,14 @@ app.use('/api/vehicle',vehicle);
 
 //its ok for other domains to contact us, since we are a rest api
 //and we provide data services to others
-const allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Methods', "*");
-    res.header('Access-Control-Allow-Origin', "*");
-    res.header('Access-Control-Allow-Headers', "*");
-    next();
-  }
+// const allowCrossDomain = function(req, res, next) {
+//     res.header('Access-Control-Allow-Methods', "*");
+//     res.header('Access-Control-Allow-Origin', "*");
+//     res.header('Access-Control-Allow-Headers', "*");
+//     next();
+//   }
 
-app.use(allowCrossDomain);
+// app.use(allowCrossDomain);
 
 //Middleware
 app.use(morgan('dev'));
