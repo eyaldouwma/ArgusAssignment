@@ -21,9 +21,9 @@ describe('VehicleInventory Component', () => {
 
        
         mock = new MockAdapter(axios);
-        mock.onGet("http://localhost:3001/api/vehicle").reply(200,mockData);
-        mock.onPut(`http://localhost:3001/api/vehicle/123`).reply(200,mockPutData);
-        mock.onDelete(`http://localhost:3001/api/vehicle/123`).reply(200);
+        mock.onGet("/api/vehicle").reply(200,mockData);
+        mock.onPut(`/api/vehicle/123`).reply(200,mockPutData);
+        mock.onDelete(`/api/vehicle/123`).reply(200);
         wrapper = shallow(<VehicleInventory/>)
 
       

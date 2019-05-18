@@ -57,7 +57,7 @@ describe('Form Component', () => {
         const spyOn = jest.spyOn(axios,'post');
         const data = { message: "OK", createdVehicle: "N"};
         wrapper.setState({name: 'Lamborghini'});
-        mock.onPost("http://localhost:3001/api/vehicle",{
+        mock.onPost("/api/vehicle",{
             name: wrapper.state('name'),
             type: wrapper.state('type')
         }).reply(200,data)

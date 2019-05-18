@@ -27,8 +27,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-    "proxy": "http://localhost:3001/"
+    ]
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.16.0",
@@ -36,5 +35,6 @@
     "enzyme-adapter-react-15": "^1.4.0",
     "enzyme-adapter-react-16": "^1.13.0",
     "react-test-renderer": "^16.8.6"
-  }
+  },
+  "proxy": "http://localhost:3001/"
 }
