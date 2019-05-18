@@ -32,7 +32,7 @@ router.post('/',(req, res) => {
         id: undefined,
         name: 123,
         created: undefined,
-        type: 123,
+        type: 'Truck',
     })
 
     vehicle.save().then(resp => {
