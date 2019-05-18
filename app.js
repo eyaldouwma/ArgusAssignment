@@ -12,10 +12,6 @@ mongoose.connect(`mongodb+srv://eyaldo1:Ee123456@vehicle-fleet-lmyrf.mongodb.net
   useNewUrlParser: true,
 })
 
-//Routing
-app.use('/api/vehicle',vehicle);
-
-
 const allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Methods', "*");
     res.header('Access-Control-Allow-Origin', "*");
@@ -28,6 +24,9 @@ app.use(allowCrossDomain);
 //Middleware
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+
+//Routing
+app.use('/api/vehicle',vehicle);
 
 //Static file declare
 app.use(express.static(path.join(__dirname,'client/build')));

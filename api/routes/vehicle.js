@@ -30,9 +30,9 @@ router.post('/',(req, res) => {
 
     const vehicle = new Vehicle({
         id: undefined,
-        name: 123,
+        name: req.body.name,
         created: undefined,
-        type: 'Truck',
+        type: req.body.type,
     })
 
     vehicle.save().then(resp => {
