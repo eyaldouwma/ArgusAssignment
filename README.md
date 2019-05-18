@@ -1,10 +1,10 @@
-## Argus - Vehicle Fleet Exercise
+# Argus - Vehicle Fleet Exercise
 
 Techonolgies Used: Node.JS Express server, React, MongoDB
 
 deploy link: https://sleepy-bayou-85663.herokuapp.com/
 
-# to run this code locally:
+## to run this code locally:
 
 ### 1 'npm install' 
 
