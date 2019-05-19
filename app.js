@@ -12,14 +12,6 @@ mongoose.connect(`mongodb+srv://eyaldo1:Ee123456@vehicle-fleet-lmyrf.mongodb.net
   useNewUrlParser: true,
 })
 
-const allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Methods', "*");
-    res.header('Access-Control-Allow-Origin', "*");
-    res.header('Access-Control-Allow-Headers', "*");
-    next();
-  }
-
-app.use(allowCrossDomain);
 
 //Middleware
 app.use(morgan('dev'));
@@ -40,9 +32,6 @@ if(process.env.NODE_ENV === 'production') {
   })
 }
 
-//build mode
-app.get('*', (req,res) => {
-  res.sendFile(path.join(__dirname+'/client/public/index.html'));
-})
+
 
 module.exports = app;
