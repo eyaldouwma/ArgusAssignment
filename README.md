@@ -35,7 +35,7 @@ runs express server and react client,
 		<tr>
 			<td>Logging</td>
 			<td>Yes</td>
-			<td>used Winston for logger, and morgan for HTTP logs</td>
+			<td>used Winston for logger, and morgan for HTTP logs, to see logs from production type 'heroku logs'</td>
 		</tr>
 		<tr>
 			<td>Testing</td>
