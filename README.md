@@ -1,4 +1,4 @@
-# Argus - Vehicle Fleet Exercise
+# Vehicle Fleet Exercise
 
 Technologies Used: Node.JS Express server, React, MongoDB
 
